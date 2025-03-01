@@ -24,6 +24,7 @@ func healthHandler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	// Set up server
+	port, _ := strconv.Atoi(os.Getenv("PORT"))
 	r := chi.NewRouter()
 	r.Use(middleware.Logger)
 
